@@ -10,6 +10,9 @@ namespace rubikscubescrambler
     {
         static void Main(string[] args)
         {
+            Console.WriteLine("How long do you want your scramble to be?");
+            int length = Int32.Parse(Console.ReadLine());
+
         }
     }
 }
