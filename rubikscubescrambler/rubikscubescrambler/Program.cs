@@ -70,7 +70,12 @@ namespace rubikscubescrambler
                     scramble[count] = "Ui";
                     count++;
                 }
-                
+                foreach (var item in scramble)
+                {
+                    Console.Write(item.ToString());
+                }
+                Console.ReadLine();
+
             }
             
 
