@@ -23,66 +23,67 @@ namespace rubikscubescrambler
                 Random rnd = new Random();
                 while (count != length)
                 {
+                    int rndcount = rnd.Next(1, 4);
                     int randomnumber = rnd.Next(1, 12);
                     rannumbers[count] = randomnumber;
                     if (rannumbers[count] == 1)
                     {
-                        scramble[count] = "R";
+                        scramble[count] = "R " + rndcount;
                         count++;
                     }
                     else if (rannumbers[count] == 2)
                     {
-                        scramble[count] = "Ri";
+                        scramble[count] = "Ri " + rndcount;
                         count++;
                     }
                     else if (rannumbers[count] == 3)
                     {
-                        scramble[count] = "L";
+                        scramble[count] = "L " + rndcount;
                         count++;
                     }
                     else if (rannumbers[count] == 4)
                     {
-                        scramble[count] = "Li";
+                        scramble[count] = "Li " + rndcount;
                         count++;
                     }
                     else if (rannumbers[count] == 5)
                     {
-                        scramble[count] = "B";
+                        scramble[count] = "B " + rndcount;
                         count++;
                     }
                     else if (rannumbers[count] == 6)
                     {
-                        scramble[count] = "Bi";
+                        scramble[count] = "Bi " + rndcount;
                         count++;
                     }
                     else if (rannumbers[count] == 7)
                     {
-                        scramble[count] = "D";
+                        scramble[count] = "D " + rndcount;
                         count++;
                     }
                     else if (rannumbers[count] == 8)
                     {
-                        scramble[count] = "Di";
+                        scramble[count] = "Di " + rndcount;
                         count++;
                     }
                     else if (rannumbers[count] == 9)
                     {
-                        scramble[count] = "F";
+                        scramble[count] = "F " + rndcount;
                         count++;
                     }
                     else if (rannumbers[count] == 10)
                     {
-                        scramble[count] = "Fi";
+                        scramble[count] = "Fi " + rndcount;
                         count++;
                     }
                     else if (rannumbers[count] == 11)
                     {
-                        scramble[count] = "U";
+                        scramble[count] = "U " + rndcount;
                         count++;
                     }
                     else if (rannumbers[count] == 12)
                     {
-                        scramble[count] = "Ui";
+                        scramble[count] = "Ui " + rndcount;
                         count++;
                     }
 
@@ -91,7 +92,7 @@ namespace rubikscubescrambler
                 Console.Write(string.Join(" " , scramble));
                 Console.WriteLine(", Would you like to generate a new one?");
                 string question = Console.ReadLine();
-                if (question == "yes")
+                if (question == "yes" || question == "Yes")
                 {
                     loop = true;
                 }
